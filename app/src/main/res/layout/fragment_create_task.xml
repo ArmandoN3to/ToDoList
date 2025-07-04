@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CreateTaskFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btn_go_back"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_margin="10dp"
+                    android:contentDescription="Notificações"
+                    android:src="@drawable/outline_arrow_left_alt_24" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/new_task"
+
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_today"
+                style="?attr/materialButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="8dp"
+
+                android:backgroundTint="@color/darkblue"
+                android:text="Today"
+                app:cornerRadius="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="12dp"
+
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="Tomorrow"
+                android:textColor="@android:color/darker_gray"
+                app:strokeColor="@android:color/darker_gray"
+                app:cornerRadius="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calendar_button"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@android:color/darker_gray"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/outline_calendar_month_24"
+                app:iconGravity="textEnd"
+                app:iconSize="25dp"
+                app:iconTint="@android:color/darker_gray"
+                app:strokeColor="@android:color/darker_gray" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_allow_notifications"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="60dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@android:color/darker_gray"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/outline_notifications_24"
+                app:iconGravity="textEnd"
+                app:iconSize="25dp"
+                app:iconTint="@android:color/darker_gray"
+                app:strokeColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select List"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_list_daily"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="8dp"
+                    android:drawableEnd="@drawable/outline_add_24"
+                    android:drawableTint="@android:color/darker_gray"
+                    android:text="Daily"
+                    android:textColor="@android:color/darker_gray"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@android:color/darker_gray" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_list_travel"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="8dp"
+                    android:drawableEnd="@drawable/outline_add_24"
+                    android:drawableTint="@android:color/darker_gray"
+                    android:text="Travel"
+                    android:textColor="@android:color/darker_gray"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@android:color/darker_gray" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_list_workout"
+                    android:backgroundTint="@color/darkblue"
+                    style="?attr/materialButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="8dp"
+                    android:drawableEnd="@drawable/outline_add_24"
+                    android:drawableTint="@android:color/white"
+                    android:text="Workout"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/title_task_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_rounded_background"
+                android:elevation="4dp"
+                android:hint="Title of your task"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+            <EditText
+                android:id="@+id/description_task_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/edittext_rounded_background"
+                android:elevation="4dp"
+                android:hint="Description(optional)"
+                android:inputType="text"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_high_priority"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="4dp"
+                    android:drawableTint="@android:color/darker_gray"
+                    android:text="High"
+                    android:textColor="@android:color/darker_gray"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@android:color/darker_gray" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_medium_priority"
+                    style="?attr/materialButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="4dp"
+                    android:drawableTint="@android:color/darker_gray"
+                    android:backgroundTint="@color/darkblue"
+
+                    android:text="Medium"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="12dp"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_low_priority"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+
+                    android:layout_marginTop="4dp"
+                    android:text="Low"
+                    android:textColor="@android:color/darker_gray"
+                    app:cornerRadius="12dp"
+                    app:strokeColor="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/CreateTaskButton"
+                android:layout_width="364dp"
+                android:layout_height="64dp"
+
+                android:backgroundTint="@color/darkblue"
+
+                android:text="Create"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
