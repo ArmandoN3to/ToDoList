@@ -6,12 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.todolist.databinding.FragmentToDoListBinding
+import com.example.todolist.databinding.FragmentUpcomingBinding
 
-// TODO: Rename parameter arguments, choose names that matc
-class ToDoListFragment : Fragment() {
 
-    private var _binding: FragmentToDoListBinding? = null
+
+class UpcomingFragment : Fragment() {
+
+    private var _binding: FragmentUpcomingBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,7 +23,7 @@ class ToDoListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentToDoListBinding.inflate(inflater, container, false)
+        _binding = FragmentUpcomingBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -30,14 +31,11 @@ class ToDoListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.todayTasks.setOnClickListener {
-            findNavController().navigate(R.id.ToDoListFragment_to_TaskDetailFragment)
-        }
-        binding.upcomingTasks.setOnClickListener {
-            findNavController().navigate(R.id.ToDoListFragment_to_UpcomingFragment)
+        binding.btnGoBack.setOnClickListener {
+            findNavController().navigate(R.id.UpcomingFragment_to_ToDoListFragment)
         }
         binding.floatingactionbuttonCreateNewTask.setOnClickListener {
-            findNavController().navigate(R.id.ToDoListFragment_to_CreateTaskFragment)
+            findNavController().navigate(R.id.UpcomingFragment_to_CreateTaskFragment)
         }
     }
 
