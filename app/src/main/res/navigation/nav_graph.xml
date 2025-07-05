@@ -39,8 +39,25 @@
             android:id="@+id/ToDoListFragment_to_CreateTaskFragment"
             app:destination="@id/CreateTaskFragment" />
         <action
+            android:id="@+id/ToDoListFragment_to_UpcomingFragment"
+            app:destination="@id/UpcomingFragment" />
+        <action
             android:id="@+id/ToDoListFragment_to_TaskDetailFragment"
             app:destination="@id/TaskDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UpcomingFragment"
+        android:name="com.example.todolist.UpcomingFragment"
+        android:label="UpcomingFragment"
+        tools:layout="@layout/fragment_upcoming">
+
+        <action
+            android:id="@+id/UpcomingFragment_to_CreateTaskFragment"
+            app:destination="@id/CreateTaskFragment" />
+        <action
+            android:id="@+id/UpcomingFragment_to_ToDoListFragment"
+            app:destination="@id/ToDoListFragment" />
     </fragment>
 
     <fragment
@@ -71,4 +88,5 @@
             app:destination="@id/ToDoListFragment" />
 
     </fragment>
+
 </navigation>

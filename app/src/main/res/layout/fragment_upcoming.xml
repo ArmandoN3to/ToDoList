@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".TaskDetailFragment">
+    tools:context=".UpcomingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,43 +15,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
 
-        <FrameLayout
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/btn_go_back"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/outline_arrow_left_alt_24" />
+
+                <TextView
+                    android:layout_width="386dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Upcoming"
+
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <CalendarView
+            android:id="@+id/calendar_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/btn_go_back"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/outline_arrow_left_alt_24" />
-
-            <TextView
-                android:layout_width="386dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="Today"
-
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-        </FrameLayout>
-    </LinearLayout>
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
