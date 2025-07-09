@@ -85,7 +85,7 @@
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:elevation="4dp"
                 android:hint="password"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp" />
 
@@ -98,7 +98,7 @@
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:elevation="4dp"
                 android:hint="confirm password"
-                android:inputType="text"
+                android:inputType="textPassword"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp" />
 
